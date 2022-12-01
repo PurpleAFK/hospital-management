@@ -36,7 +36,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="new_2">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -55,7 +55,7 @@
      <string>New</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="edit">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -74,7 +74,7 @@
      <string>Edit</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="view">
     <property name="geometry">
      <rect>
       <x>410</x>

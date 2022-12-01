@@ -48,7 +48,7 @@
     <string>Enter Patient ID:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="pid">
    <property name="geometry">
     <rect>
      <x>210</x>
