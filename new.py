@@ -26,8 +26,8 @@ class Ui_new(object):
         self.submit.setObjectName("submit")
 
         self.submit.clicked.connect(self.login)
-        #self.submit.clicked.connect(self.success)
-        #self.submit.clicked.connect(self.close)
+        self.submit.clicked.connect(self.success)
+        #self.submit.clicked.connect(self.exitapp)
 
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(0, 0, 1041, 91))
@@ -267,10 +267,8 @@ class Ui_new(object):
             print("smth is wrong i can feel it")
             print(query)
 
-    def close(self):
-        import sys
-        app = QtWidgets.QApplication(sys.argv)
-        sys.exit(app.exec_())
+    def exitapp(self):
+        self.close()
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import mysql.connector as mc
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
@@ -24,6 +24,7 @@ class Ui_Dialog(object):
 
         self.retranslateUi(Dialog)
         self.buttonBox.accepted.connect(Dialog.accept) # type: ignore
+        self.buttonBox.accepted.connect(self.which)
         self.buttonBox.rejected.connect(Dialog.reject) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
@@ -31,7 +32,33 @@ class Ui_Dialog(object):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
         self.label.setText(_translate("Dialog", "Enter Patient ID:"))
+    
+    def which(self):
+        try:
 
+            pid = self.pid.text()
+            
+            mydb = mc.connect(
+                host = 'localhost',
+                user='root',
+                password='password',
+                database='ohms'
+
+            )
+
+            mycursor = mydb.cursor()
+            query = "select * from overflow where pid = " + pid +";"
+            mycursor.execute(query)
+            mydb.commit()
+            mydb.close()
+            print(query)
+            print("Successful")
+
+            
+
+        except mc.Error as e:
+            print("smth is wrong i can feel it")
+            print(query)
 
 if __name__ == "__main__":
     import sys
