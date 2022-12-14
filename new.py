@@ -25,11 +25,12 @@ class Ui_new(object):
         self.submit.setFont(font)
         self.submit.setObjectName("submit")
 
-        var = False
 
         self.submit.clicked.connect(self.login)
         self.submit.clicked.connect(self.success)
         self.submit.clicked.connect(new.close)
+
+        
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(0, 0, 1041, 91))
         font = QtGui.QFont()
