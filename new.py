@@ -25,10 +25,11 @@ class Ui_new(object):
         self.submit.setFont(font)
         self.submit.setObjectName("submit")
 
+        var = False
+
         self.submit.clicked.connect(self.login)
         self.submit.clicked.connect(self.success)
-        #self.submit.clicked.connect(self.exitapp)
-
+        self.submit.clicked.connect(new.close)
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(0, 0, 1041, 91))
         font = QtGui.QFont()
@@ -230,8 +231,11 @@ class Ui_new(object):
         self.label_10.setText(_translate("new", "Gardian Name:"))
         self.label_11.setText(_translate("new", "Notes:"))
         self.label_12.setText(_translate("new", "Patient ID"))
-    
+
+
     def login(self):
+
+        
         try:
             pname = self.pname.text()
             pid = self.pid.text()
@@ -258,18 +262,20 @@ class Ui_new(object):
             mycursor.execute(query)
             mydb.commit()
             mydb.close()
+            var = True
             print(query)
             print("Successful")
 
             
 
         except mc.Error as e:
+            Var = False
             print("smth is wrong i can feel it")
             print(query)
+            
 
-    def exitapp(self):
-        self.close()
 
+    
 
 if __name__ == "__main__":
     import sys

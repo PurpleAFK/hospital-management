@@ -13,7 +13,7 @@ class Ui_success(QMainWindow):
         self.ok.setGeometry(QtCore.QRect(130, 200, 121, 41))
         self.ok.setObjectName("ok")
 
-        self.ok.clicked.connect(self.quitapp)
+        self.ok.clicked.connect(success.close)
 
         self.label = QtWidgets.QLabel(success)
         self.label.setGeometry(QtCore.QRect(80, 70, 241, 91))
@@ -33,8 +33,6 @@ class Ui_success(QMainWindow):
         self.ok.setText(_translate("success", "OK"))
         self.label.setText(_translate("success", "Successful!"))
 
-    def quitapp(self):
-        self.close()
 
 if __name__ == "__main__":
     import sys
