@@ -204,7 +204,7 @@ class Ui_view(object):
         self.pid.setGeometry(QtCore.QRect(890, 210, 151, 31))
         self.pid.setObjectName("pid")
         self.label_24 = QtWidgets.QLabel(self.centralwidget)
-        self.label_24.setGeometry(QtCore.QRect(740, 200, 181, 51))
+        self.label_24.setGeometry(QtCore.QRect(715, 200, 181, 51))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(14)

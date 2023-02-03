@@ -2,6 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication, QDialog, QPushButton, QMessageBox
 from new import Ui_new
 from view import Ui_view
+from edit import Ui_edit
 from success import Ui_success
 
 class Ui_MainWindow(object):
@@ -16,6 +17,13 @@ class Ui_MainWindow(object):
     def openWindow2(self):
          self.window = QtWidgets.QMainWindow()
          self.ui = Ui_view()
+         self.title = "Overflow"
+         self.ui.setupUi(self.window)
+         self.window.show()
+
+    def openWindow3(self):
+         self.window = QtWidgets.QMainWindow()
+         self.ui = Ui_edit()
          self.title = "Overflow"
          self.ui.setupUi(self.window)
          self.window.show()
@@ -46,6 +54,9 @@ class Ui_MainWindow(object):
 
         self.edit = QtWidgets.QPushButton(self.centralwidget)
         self.edit.setGeometry(QtCore.QRect(410, 250, 191, 71))
+
+        self.edit.clicked.connect(self.openWindow3)
+
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
