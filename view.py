@@ -12,7 +12,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import mysql.connector as mc
 
 class Ui_view(object):
-    def setupUi(self, view):
+    def setupUi(self, view):                                                #Creating View Window
         view.setObjectName("view")
         view.resize(1129, 665)
         self.centralwidget = QtWidgets.QWidget(view)
