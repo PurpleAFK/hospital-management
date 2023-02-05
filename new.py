@@ -5,14 +5,14 @@ from success import Ui_success
 
 class Ui_new(object):
 
-    def success(self):
+    def success(self):                                              #Window when command is executed successfully
          self.window = QtWidgets.QMainWindow()
          self.ui = Ui_success()
          self.title = "Success"
          self.ui.setupUi(self.window)
          self.window.show()
 
-    def setupUi(self, new):
+    def setupUi(self, new):                                          #Creating 'New' Window
         new.setObjectName("new")
         new.resize(1042, 757)
         self.centralwidget = QtWidgets.QWidget(new)
@@ -26,9 +26,9 @@ class Ui_new(object):
         self.submit.setObjectName("submit")
 
 
-        self.submit.clicked.connect(self.login)
-        self.submit.clicked.connect(self.success)
-        self.submit.clicked.connect(new.close)
+        self.submit.clicked.connect(self.login)                          
+        self.submit.clicked.connect(self.success)                              #Opens success window
+        self.submit.clicked.connect(new.close)                                 #Closes the window
 
         
         self.label = QtWidgets.QLabel(self.centralwidget)
