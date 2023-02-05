@@ -7,21 +7,21 @@ from success import Ui_success
 
 class Ui_MainWindow(object):
 
-    def openWindow(self):
-         self.window = QtWidgets.QMainWindow()                      #New Window
+    def openWindow(self):                                               #New Window
+         self.window = QtWidgets.QMainWindow()                      
          self.ui = Ui_new()
          self.title = "Overflow"
          self.ui.setupUi(self.window)
          self.window.show()
 
-    def openWindow2(self):                                          #View Window
+    def openWindow2(self):                                              #View Window                                          
          self.window = QtWidgets.QMainWindow()
          self.ui = Ui_view()
          self.title = "Overflow"
          self.ui.setupUi(self.window)
          self.window.show()
 
-    def openWindow3(self):                                          #Edit Window
+    def openWindow3(self):                                              #Edit Window                                          
          self.window = QtWidgets.QMainWindow()
          self.ui = Ui_edit()
          self.title = "Overflow"
