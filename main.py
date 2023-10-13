@@ -20,14 +20,12 @@ class Ui_MainWindow(object):
          self.title = "Overflow"
          self.ui.setupUi(self.window)
          self.window.show()
-
     def openWindow3(self):
          self.window = QtWidgets.QMainWindow()
          self.ui = Ui_edit()
          self.title = "Overflow"
          self.ui.setupUi(self.window)
          self.window.show()
-
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
