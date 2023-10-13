@@ -7,25 +7,34 @@ from success import Ui_success
 
 class Ui_MainWindow(object):
 
-    def openWindow(self):
-         self.window = QtWidgets.QMainWindow()
+    def openWindow(self):                                               #New Window
+         self.window = QtWidgets.QMainWindow()                      
          self.ui = Ui_new()
          self.title = "Overflow"
          self.ui.setupUi(self.window)
          self.window.show()
 
-    def openWindow2(self):
+    def openWindow2(self):                                              #View Window                                          
          self.window = QtWidgets.QMainWindow()
          self.ui = Ui_view()
          self.title = "Overflow"
          self.ui.setupUi(self.window)
          self.window.show()
+<<<<<<< HEAD
     def openWindow3(self):
+=======
+
+    def openWindow3(self):                                              #Edit Window                                          
+>>>>>>> 7f97d12ec9ef9ecbff44e3a5675e065a89d84362
          self.window = QtWidgets.QMainWindow()
          self.ui = Ui_edit()
          self.title = "Overflow"
          self.ui.setupUi(self.window)
          self.window.show()
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7f97d12ec9ef9ecbff44e3a5675e065a89d84362
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
